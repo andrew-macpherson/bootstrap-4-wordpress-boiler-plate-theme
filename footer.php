@@ -1,13 +1,10 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-			
-			</footer>
-			<!-- /footer -->
+	<footer class="footer" role="contentinfo">
+		<div class="container">
+			Footer content here
 		</div>
-		<!-- /wrapper -->
+	</footer>
 
-		<?php wp_footer(); ?>
+	<?php wp_footer(); ?>
 
 	</body>
 </html>
