@@ -24,8 +24,23 @@
 				Logo
 			</div>
 
-			<nav class="nav" role="navigation">
-		        <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+			<nav class="navbar navbar-toggleable-md navbar-light bg-faded" role="navigation">
+
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+
+				<div class="collapse navbar-collapse">
+					<?php 
+					wp_nav_menu( 
+						array(
+							'theme_location'    => 'main',
+							'container'         => 'false',
+							'menu_class'        => 'nav'
+						)
+					);
+					?>
+				</div>
 		    </nav>
 	</div>
 </header>

@@ -1,5 +1,6 @@
 <?php
 
+
 //ADD THUMBNAIL SUPPORT
 add_theme_support('post-thumbnails');
 
