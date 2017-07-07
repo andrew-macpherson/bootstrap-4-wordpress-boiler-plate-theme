@@ -20,8 +20,10 @@
 <!-- header -->
 <header class="header clear" role="banner">
 	<div class="container">
-			<div class="logo">
-				Logo
+			<div class="logo d-flex">
+				<div class="col-12">
+					<span>Logo</span>
+				</div>
 			</div>
 
 			<nav class="navbar navbar-toggleable-md navbar-light bg-faded" role="navigation">
@@ -36,7 +38,8 @@
 						array(
 							'theme_location'    => 'main',
 							'container'         => 'false',
-							'menu_class'        => 'nav'
+							'menu_class'        => 'navbar-nav mr-auto',
+							'walker'			=> new bootstrap_Walker()
 						)
 					);
 					?>
