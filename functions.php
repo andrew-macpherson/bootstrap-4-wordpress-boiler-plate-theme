@@ -16,6 +16,12 @@ function register_site_menus(){
 
 class bootstrap_Walker extends Walker_Nav_Menu {
 
+	var $toggle = false;
+
+	function __construct($toggle){
+		$this->toggle = $toggle;
+	}
+
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat( "\t", $depth );
 		$output .= "\n$indent<ul role=\"menu\" class=\" dropdown-menu\" >\n";
@@ -41,7 +47,7 @@ class bootstrap_Walker extends Walker_Nav_Menu {
 		//First Level
 		if($depth == 0){
 			$output .= "<li class='nav-item ".$liClass." " .  implode(" ", $item->classes) . "'>";
-				$output .= '<a class="nav-link '.$class.'" href="' . $permalink . '" '.(($args->walker->has_children)?"data-toggle=dropdown":"").'>';
+				$output .= '<a class="nav-link '.$class.'" href="' . $permalink . '" '.(($args->walker->has_children && $this->toggle)?"data-toggle=dropdown":"").'>';
 				$output .= $title;
 				$output .= '</a>';
 			//$output .= '</li>';
