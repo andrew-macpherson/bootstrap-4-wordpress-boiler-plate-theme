@@ -28,13 +28,13 @@
 				</button>
 
 				<div id="mainMenu" class="collapse navbar-collapse">
-					<?php
-					wp_nav_menu(
+					<?php 
+					wp_nav_menu( 
 						array(
 							'theme_location'    => 'main',
 							'container'         => 'false',
 							'menu_class'        => 'navbar-nav mr-auto',
-							'walker'			=> new bootstrap_Walker(true)
+							'walker'			=> new bootstrap_Walker(false)
 						)
 					);
 					?>
